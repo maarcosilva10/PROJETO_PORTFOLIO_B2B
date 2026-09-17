@@ -1,0 +1,293 @@
+css
+/* ===================================================
+   COMPANIES SECTION
+=================================================== */
+
+.companies {
+    width: 100%;
+    padding: var(--spacing-vertical) var(--spacing-horizontal);
+
+    display: flex;
+    justify-content: center;
+}
+
+.companies-container {
+    width: 100%;
+    max-width: 110rem;
+
+    text-align: center;
+}
+
+.companies-title {
+    margin-bottom: 3.2rem;
+
+    color: var(--white, #ffffff);
+    font-size: clamp(2.8rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.companies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2.4rem 3.2rem;
+}
+
+.company-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: var(--white, #ffffff);
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    opacity: 0.9;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.company-item:hover {
+    opacity: 1;
+    transform: translateY(-0.2rem);
+}
+
+.company-item img {
+    width: auto;
+    height: 2.4rem;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.company-item:focus-visible {
+    outline: 0.2rem solid var(--purple-400, #c084fc);
+    outline-offset: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+/* ===================================================
+   COMPANIES — TABLET / DESKTOP
+=================================================== */
+
+@media (min-width: 768px) {
+    .companies-grid {
+        justify-content: space-between;
+        gap: 4rem;
+    }
+}
+
+
+/* ===================================================
+   DISCOVER SECTION
+=================================================== */
+
+.discover {
+    width: 100%;
+    padding: var(--spacing-vertical) var(--spacing-horizontal);
+
+    display: flex;
+    justify-content: center;
+}
+
+.discover-container {
+    width: 100%;
+    max-width: 110rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ===================================================
+   DISCOVER — IMAGE
+=================================================== */
+
+.discover-image {
+    width: 100%;
+    max-width: 28rem;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 4.8rem 0;
+}
+
+.discover-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* ===================================================
+   DISCOVER — TAG
+=================================================== */
+
+.discover-tag {
+    display: block;
+
+    margin-bottom: 1.2rem;
+
+    color: var(--white, #ffffff);
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    line-height: 1.2;
+
+    text-transform: uppercase;
+}
+
+
+/* ===================================================
+   DISCOVER — TITLE
+=================================================== */
+
+.discover-title {
+    margin-bottom: 1.6rem;
+
+    color: var(--white, #ffffff);
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.discover-title .purple-text {
+    color: var(--purple-400, #c084fc);
+}
+
+.discover-title .boxed-text {
+    display: inline-block;
+
+    padding: 0 0.6rem;
+
+    border: 0.2rem solid var(--orange-700, #c2410c);
+}
+
+
+/* ===================================================
+   DISCOVER — DESCRIPTION
+=================================================== */
+
+.discover-description {
+    max-width: 48rem;
+
+    margin: 0 auto 2.4rem;
+
+    color: var(--blue-gray-300, #94a3b8);
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+
+/* ===================================================
+   DISCOVER — LINK
+=================================================== */
+
+.discover-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: var(--white, #ffffff);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        gap 0.2s ease,
+        color 0.2s ease;
+}
+
+.discover-link:hover {
+    gap: 1.2rem;
+    color: var(--purple-400, #c084fc);
+}
+
+.discover-link:focus-visible {
+    outline: 0.2rem solid var(--purple-400, #c084fc);
+    outline-offset: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+
+/* ===================================================
+   DISCOVER — TABLET / DESKTOP
+=================================================== */
+
+@media (min-width: 768px) {
+    .discover-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 6rem;
+
+        text-align: left;
+    }
+
+    .discover-content {
+        flex: 1;
+        max-width: 60rem;
+    }
+
+    .discover-image {
+        flex: 1;
+        max-width: 40rem;
+
+        justify-content: flex-end;
+
+        order: 2;
+
+        margin: 0;
+    }
+
+    .discover-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+/* ===================================================
+   DISCOVER — LARGE SCREENS
+=================================================== */
+
+@media (min-width: 1200px) {
+    .discover-container {
+        gap: 8rem;
+    }
+
+    .discover-image {
+        max-width: 44rem;
+    }
+}
+
+
+/* ===================================================
+   REDUCED MOTION
+=================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .company-item,
+    .discover-link {
+        transition: none;
+    }
+
+    .company-item:hover {
+        transform: none;
+    }
+}
+
