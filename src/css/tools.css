@@ -1,0 +1,225 @@
+/* ===================================================
+   TOOLS / POWERFUL SECTION
+   Mobile First
+=================================================== */
+
+.tools {
+    width: 100%;
+    padding: var(--spacing-vertical) var(--spacing-horizontal);
+    display: flex;
+    justify-content: center;
+}
+
+.tools-container {
+    width: 100%;
+    max-width: 110rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3.2rem;
+}
+
+/* ===================================================
+   IMAGEM / MOCKUP
+=================================================== */
+
+.tools-image {
+    width: 100%;
+    max-width: 48rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tools-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ===================================================
+   CONTEÚDO DE TEXTO
+=================================================== */
+
+.tools-content {
+    width: 100%;
+    max-width: 50rem;
+}
+
+.tools-tag {
+    display: block;
+    margin-bottom: 1.2rem;
+
+    color: var(--white, #ffffff);
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.tools-tag .boxed-tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+
+    color: var(--white, #ffffff);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+
+    border: 0.2rem solid var(--orange-700, #ea580c);
+}
+
+.tools-title {
+    margin-bottom: 1.6rem;
+
+    color: var(--white, #ffffff);
+    font-size: clamp(3.2rem, 6vw, 4.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.tools-description {
+    margin: 0 auto;
+
+    color: var(--blue-gray-300, #94a3b8);
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    line-height: 1.6;
+}
+
+/* ===================================================
+   MOBILE PEQUENO
+=================================================== */
+
+@media (max-width: 480px) {
+    .tools {
+        padding: 4rem 1.6rem;
+    }
+
+    .tools-container {
+        gap: 2.4rem;
+    }
+
+    .tools-image {
+        max-width: 100%;
+    }
+
+    .tools-content {
+        max-width: 100%;
+    }
+
+    .tools-tag {
+        font-size: 1.5rem;
+        letter-spacing: 0.15rem;
+    }
+
+    .tools-tag .boxed-tag {
+        padding: 0.3rem 0.6rem;
+    }
+
+    .tools-title {
+        font-size: 3rem;
+    }
+
+    .tools-description {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===================================================
+   TABLET
+=================================================== */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .tools-container {
+        gap: 4rem;
+    }
+
+    .tools-image {
+        max-width: 52rem;
+    }
+}
+
+/* ===================================================
+   DESKTOP
+=================================================== */
+
+@media (min-width: 768px) {
+    .tools {
+        padding: 6rem 2rem;
+    }
+
+    .tools-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 6rem;
+    }
+
+    /* -----------------------------------------------
+       CONTEÚDO À ESQUERDA
+    ------------------------------------------------ */
+
+    .tools-content {
+        order: 1;
+        flex: 1;
+        max-width: 48rem;
+    }
+
+    /* -----------------------------------------------
+       IMAGEM À DIREITA
+    ------------------------------------------------ */
+
+    .tools-image {
+        order: 2;
+        flex: 1.2;
+        max-width: 58rem;
+        justify-content: flex-end;
+    }
+
+    /* -----------------------------------------------
+       TAG NO DESKTOP
+    ------------------------------------------------ */
+
+    .tools-tag .boxed-tag {
+        border: none;
+        padding: 0;
+    }
+
+    /* -----------------------------------------------
+       DESCRIÇÃO
+    ------------------------------------------------ */
+
+    .tools-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* ===================================================
+   TELAS GRANDES
+=================================================== */
+
+@media (min-width: 1200px) {
+    .tools-container {
+        gap: 8rem;
+    }
+
+    .tools-image {
+        max-width: 62rem;
+    }
+}
+
+/* ===================================================
+   ACESSIBILIDADE
+=================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .tools,
+    .tools-container,
+    .tools-image,
+    .tools-content {
+        scroll-behavior: auto;
+    }
+}
